@@ -1,0 +1,54 @@
+/**
+ * Responsive Columns order.
+ *
+ * WordPress currently exposes fixed Core Columns breakpoints rather than
+ * configurable viewport tokens, so these values mirror Core behavior.
+ *
+ * @package WithSiteTools
+ */
+
+/* stylelint-disable selector-class-pattern, rule-empty-line-before -- WordPress Core editor class and Prettier-compatible media formatting. */
+
+@media (max-width: 599px) {
+	.wp-block-columns.has-reversed-columns-mobile,
+	.block-editor-block-list__block.has-reversed-columns-mobile
+		> .wp-block-columns {
+		flex-direction: column-reverse;
+	}
+
+	.wp-block-columns.has-reversed-columns-mobile.is-not-stacked-on-mobile,
+	.wp-block-columns.with-horizontal-scroll-mobile.has-reversed-columns-mobile,
+	.block-editor-block-list__block.has-reversed-columns-mobile
+		> .wp-block-columns.is-not-stacked-on-mobile,
+	.block-editor-block-list__block.with-horizontal-scroll-mobile.has-reversed-columns-mobile
+		> .wp-block-columns {
+		flex-direction: row-reverse;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+	.wp-block-columns.has-reversed-columns-tablet,
+	.block-editor-block-list__block.has-reversed-columns-tablet
+		> .wp-block-columns {
+		flex-direction: column-reverse;
+	}
+
+	.wp-block-columns.has-reversed-columns-tablet.is-not-stacked-on-mobile,
+	.wp-block-columns.with-horizontal-scroll-mobile.has-reversed-columns-tablet,
+	.block-editor-block-list__block.has-reversed-columns-tablet
+		> .wp-block-columns.is-not-stacked-on-mobile,
+	.block-editor-block-list__block.with-horizontal-scroll-mobile.has-reversed-columns-tablet
+		> .wp-block-columns {
+		flex-direction: row-reverse;
+	}
+}
+
+@media (min-width: 782px) {
+	.wp-block-columns.has-reversed-columns-desktop,
+	.block-editor-block-list__block.has-reversed-columns-desktop
+		> .wp-block-columns {
+		flex-direction: row-reverse;
+	}
+}
+
+/* stylelint-enable selector-class-pattern, rule-empty-line-before */

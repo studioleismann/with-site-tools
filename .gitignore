@@ -1,0 +1,7 @@
+node_modules/
+.wp-env/
+.webpack-cache/
+dist/
+.DS_Store
+*.log
+.with-site-tools-manifest.json

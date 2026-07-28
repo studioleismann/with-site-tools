@@ -1,0 +1,118 @@
+/**
+ * Site Tools settings page.
+ *
+ * @package WithSiteTools
+ */
+
+/* stylelint-disable-next-line selector-class-pattern -- WordPress admin screen class. */
+.tools_page_with-site-tools #wpcontent {
+	background: #fff;
+}
+
+.with-site-tools-admin-page {
+	box-sizing: border-box;
+	margin-inline: auto;
+	padding-inline: 20px;
+	max-width: 1160px;
+}
+
+.with-site-tools-page-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 32px 0 28px;
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.with-site-tools-page-intro {
+	margin: 8px 0 0;
+	max-width: 720px;
+	color: #50575e;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.with-site-tools-sections {
+	border-top: 1px solid #dcdcde;
+}
+
+.with-site-tools-section {
+	padding: 28px 0 36px;
+
+	+ .with-site-tools-section {
+		border-top: 1px solid #dcdcde;
+	}
+
+	&__header {
+		margin-bottom: 16px;
+		max-width: 720px;
+
+		h2 {
+			margin: 0;
+			font-size: 18px;
+			line-height: 1.4;
+		}
+
+		p {
+			margin: 4px 0 0;
+			color: #50575e;
+		}
+	}
+
+	.dataviews-wrapper {
+		margin-top: 0;
+	}
+}
+
+.with-site-tools-feature strong,
+.with-site-tools-feature small {
+	display: block;
+}
+
+.with-site-tools-feature small,
+.with-site-tools-feature p {
+	color: #50575e;
+}
+
+.with-site-tools-feature small {
+	margin-top: 2px;
+}
+
+.with-site-tools-feature p {
+	margin: 4px 0 0;
+}
+
+.with-site-tools-feature {
+	min-width: 0;
+}
+
+.with-site-tools-feature-list {
+	display: grid;
+	gap: 12px;
+}
+
+.with-site-tools-card-content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.with-site-tools-card-content > .components-toggle-control {
+	flex: 0 0 auto;
+}
+
+@media (max-width: 782px) {
+	/* stylelint-disable-next-line rule-empty-line-before */
+	.with-site-tools-card-content {
+		display: block;
+	}
+
+	.with-site-tools-card-content .components-toggle-control {
+		margin-top: 16px;
+	}
+}

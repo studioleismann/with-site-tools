@@ -1,0 +1,52 @@
+{
+	"name": "with-site-tools",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Reusable, opt-in site and block features for WordPress projects.",
+	"type": "module",
+	"scripts": {
+		"start": "wp-scripts start --config webpack.config.cjs",
+		"build": "wp-scripts build --config webpack.config.cjs",
+		"lint:js": "wp-scripts lint-js 'src/**/*.{js,jsx,json,ts,tsx}' 'scripts/**/*.mjs' 'webpack.config.cjs'",
+		"lint:css": "wp-scripts lint-style 'src/**/*.scss'",
+		"lint:css:fix": "wp-scripts lint-style 'src/**/*.scss' --fix",
+		"format": "wp-scripts format 'src/**/*.{js,jsx,json,ts,tsx,css,scss}' 'scripts/**/*.mjs' 'webpack.config.cjs'",
+		"zip": "wp-scripts plugin-zip --root-folder=with-site-tools && mkdir -p dist && mv with-site-tools.zip dist/with-site-tools.zip",
+		"sync": "node ./scripts/sync.mjs sync",
+		"sync:check": "node ./scripts/sync.mjs sync --dry-run",
+		"env:start": "wp-env start --auto-port",
+		"env:stop": "wp-env stop",
+		"env:clean": "wp-env clean all"
+	},
+	"files": [
+		"build",
+		"docs",
+		"includes",
+		"src/**/*.php",
+		"src/**/*.svg",
+		"with-site-tools.php",
+		"uninstall.php",
+		"README.md",
+		"CHANGELOG.md",
+		"LICENSE"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"author": "Studio Leismann",
+	"license": "GPL-2.0-or-later",
+	"prettier": "@wordpress/prettier-config",
+	"devDependencies": {
+		"@wordpress/api-fetch": "^7.51.0",
+		"@wordpress/block-editor": "^16.0.0",
+		"@wordpress/components": "^37.0.0",
+		"@wordpress/compose": "^8.4.0",
+		"@wordpress/dom-ready": "^4.51.0",
+		"@wordpress/element": "^8.3.0",
+		"@wordpress/env": "^10.0.0",
+		"@wordpress/hooks": "^4.51.0",
+		"@wordpress/i18n": "^6.24.0",
+		"@wordpress/icons": "^15.2.0",
+		"@wordpress/scripts": "^32.0.0"
+	}
+}

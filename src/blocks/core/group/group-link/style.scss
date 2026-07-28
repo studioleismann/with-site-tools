@@ -1,0 +1,36 @@
+/**
+ * Linked Group behavior.
+ *
+ * @package WithSiteTools
+ */
+
+.wp-block-group.with-site-tools-group-link {
+	position: relative;
+
+	/* stylelint-disable-next-line selector-class-pattern -- BEM element. */
+	> .with-site-tools-group-link__overlay {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		margin: 0;
+		inset: 0;
+
+		&:focus-visible {
+			outline: 2px solid currentcolor;
+			outline-offset: 2px;
+		}
+	}
+
+	:where(
+		/* stylelint-disable-next-line selector-class-pattern -- BEM element. */
+		a:not(.with-site-tools-group-link__overlay),
+			button,
+			input,
+			select,
+			textarea,
+			summary
+		) {
+		position: relative;
+		z-index: 2;
+	}
+}

@@ -1,0 +1,14 @@
+/**
+ * Form Builder honeypot.
+ *
+ * @package WithSiteTools
+ */
+
+.with-site-tools-form-honeypot {
+	position: absolute;
+	inset-block-start: auto;
+	inset-inline-start: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
