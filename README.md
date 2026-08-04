@@ -1,42 +1,39 @@
 # With Site Tools
 
-Reusable, opt-in site and Core block behavior for WordPress projects.
+Reusable, opt-in site and Core block behavior for WordPress projects. The
+plugin is independent from any theme, and every feature remains disabled until
+an administrator enables it under **Tools > Site Tools**.
 
-The plugin is independent from `with-base`: the theme works without this plugin,
-and every plugin feature is disabled until it is explicitly enabled under
-**Tools > Site Tools**.
+## Requirements
 
-Stable releases update through the standard WordPress Plugins screen. Each
-release is built and validated by GitHub Actions before its installable ZIP is
-attached to the corresponding public GitHub release.
+- WordPress 7.0 or newer
+- PHP 8.0 or newer
 
-## Quick start
+## Install
 
-```bash
-npm install
-npm run build
-npm run env:start
-```
+Download `with-site-tools.zip` from the
+[latest release](https://github.com/studioleismann/with-site-tools/releases/latest),
+upload it under **Plugins > Add Plugin > Upload Plugin**, and activate it.
 
-The repository root is an installable WordPress plugin. `wp-env` mounts and
-activates it directly. npm is used only for development tooling; this repository
-is not an npm package intended for publication.
+Continue with the [getting-started tutorial](docs/tutorials/getting-started.md)
+to enable and verify the first feature.
 
-## Features
+## Documentation
 
-- Accordion FAQ schema
-- Responsive Columns order
-- File preview default
-- Linked Group
-- Custom List icons
-- Optional Post Terms links
-- Spacer margin restrictions
-- Featured image fallback
-- Emoji asset removal
-- Admin Site Enhancements Pro Form Builder honeypot
-- Complianz Website Scan column hidden by default
+The [documentation index](docs/README.md) separates learning, task-oriented
+guides, technical reference, and background explanation:
 
-See [docs/architecture.md](docs/architecture.md) for feature ownership and
-[docs/migration-from-with-base.md](docs/migration-from-with-base.md) for the
-initial extraction contract. Distribution is documented in
-[docs/deployment.md](docs/deployment.md).
+- [Tutorial: get started](docs/tutorials/getting-started.md)
+- [How-to guides](docs/README.md#how-to-guides)
+- [Feature and settings reference](docs/reference/features-and-settings.md)
+- [Architecture explanation](docs/explanation/architecture.md)
+
+## Updates
+
+Version 0.2.0 and newer receive stable releases through the standard WordPress
+Plugins screen. Release ZIPs are built and validated by GitHub Actions before
+publication.
+
+## License
+
+GPL-2.0-or-later. See [LICENSE](LICENSE).
