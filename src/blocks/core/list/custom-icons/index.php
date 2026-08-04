@@ -60,7 +60,7 @@ function with_site_tools_render_custom_list_icon( string $block_content, array $
 	$icon_name  = '' !== $icon_value
 		? sanitize_key( (string) $icon_value )
 		: '';
-	$icon_map  = with_site_tools_get_list_icon_codes();
+	$icon_map   = with_site_tools_get_list_icon_codes();
 
 	if ( ! isset( $icon_map[ $icon_name ] ) ) {
 		return $block_content;

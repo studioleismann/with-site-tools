@@ -4,6 +4,14 @@ All notable changes to With Site Tools are documented here.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-04
+
+### Added
+
+- Optional Complianz integration that hides the Website Scan column by default while preserving users' Screen Options.
+- Native WordPress updates from validated public GitHub release assets.
+- Automated build, Coding Standards, ZIP verification, checksum, and GitHub release workflow.
+
 ## [0.1.0] - 2026-07-28
 
 ### Added

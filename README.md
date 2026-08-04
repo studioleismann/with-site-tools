@@ -6,6 +6,10 @@ The plugin is independent from `with-base`: the theme works without this plugin,
 and every plugin feature is disabled until it is explicitly enabled under
 **Tools > Site Tools**.
 
+Stable releases update through the standard WordPress Plugins screen. Each
+release is built and validated by GitHub Actions before its installable ZIP is
+attached to the corresponding public GitHub release.
+
 ## Quick start
 
 ```bash
@@ -30,6 +34,7 @@ is not an npm package intended for publication.
 - Featured image fallback
 - Emoji asset removal
 - Admin Site Enhancements Pro Form Builder honeypot
+- Complianz Website Scan column hidden by default
 
 See [docs/architecture.md](docs/architecture.md) for feature ownership and
 [docs/migration-from-with-base.md](docs/migration-from-with-base.md) for the

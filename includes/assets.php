@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * @return array{dependencies:array<int,string>,version:string}
  */
 function with_site_tools_read_asset_file( string $asset_file ): array {
-	$asset = file_exists( $asset_file ) ? require $asset_file : array();
+	$asset            = file_exists( $asset_file ) ? require $asset_file : array();
 	$asset_base       = preg_replace( '/\.asset\.php$/', '', $asset_file );
 	$fallback_version = WITH_SITE_TOOLS_VERSION;
 
