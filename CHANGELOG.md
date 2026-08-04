@@ -4,6 +4,10 @@ All notable changes to With Site Tools are documented here.
 
 ## [Unreleased]
 
+### Changed
+
+- Reorganized the documentation into tutorials, how-to guides, reference, and explanation following the Divio documentation system.
+
 ## [0.2.0] - 2026-08-04
 
 ### Added
