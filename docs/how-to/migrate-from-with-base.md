@@ -17,7 +17,7 @@ have been tested against the matrix below.
 
 | Previous with-base source | With Site Tools owner | Migration decision |
 | --- | --- | --- |
-| `inc/with-base/gpdr-remove-emojis.php` | `src/site/disable-emojis/` | Enable the plugin feature, verify the frontend, then remove the theme file and loader. |
+| `inc/with-base/gdpr-remove-emojis.php` | `src/site/disable-emojis/` | Enable the plugin feature, verify the frontend, then remove the theme file and loader. |
 | Accordion editor and schema files | `src/blocks/core/accordion/faq-schema/` | Existing `is-faqs` classes remain supported. |
 | Columns editor, render, and style files | `src/blocks/core/columns/responsive-reverse/` | Existing `withBaseReverseColumnsOn` attributes remain readable. |
 | File preview default | `src/blocks/core/file/disable-preview/` | Verify a newly inserted File block before removing the theme default. |
