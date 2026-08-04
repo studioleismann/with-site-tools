@@ -30,6 +30,7 @@ is not an npm package intended for publication.
 - Featured image fallback
 - Emoji asset removal
 - Admin Site Enhancements Pro Form Builder honeypot
+- Complianz Website Scan column hidden by default
 
 See [docs/architecture.md](docs/architecture.md) for feature ownership and
 [docs/migration-from-with-base.md](docs/migration-from-with-base.md) for the

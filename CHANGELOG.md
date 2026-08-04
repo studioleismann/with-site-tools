@@ -4,6 +4,10 @@ All notable changes to With Site Tools are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- Optional Complianz integration that hides the Website Scan column by default while preserving users' Screen Options.
+
 ## [0.1.0] - 2026-07-28
 
 ### Added
