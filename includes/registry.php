@@ -38,8 +38,8 @@ function with_site_tools_register_feature( string $directory, string $label, str
 		return '';
 	}
 
-	$slug     = trim( substr( $feature_directory, strlen( $plugin_directory ) ), '/' );
-	$segments = explode( '/', $slug );
+	$slug                    = trim( substr( $feature_directory, strlen( $plugin_directory ) ), '/' );
+	$segments                = explode( '/', $slug );
 	$expected_segment_counts = array(
 		'blocks'  => 4,
 		'media'   => 2,

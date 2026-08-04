@@ -43,8 +43,8 @@ function with_site_tools_register_admin_bar( WP_Admin_Bar $admin_bar ): void {
 				_n( 'Site Tools (%d)', 'Site Tools (%d)', $enabled_count, 'with-site-tools' ),
 				$enabled_count
 			),
-			'href'  => admin_url( 'tools.php?page=with-site-tools' ),
-			'meta'  => array(
+			'href'   => admin_url( 'tools.php?page=with-site-tools' ),
+			'meta'   => array(
 				'title' => __( 'Open Site Tools settings', 'with-site-tools' ),
 			),
 		)

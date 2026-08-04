@@ -6,6 +6,10 @@ The plugin is independent from `with-base`: the theme works without this plugin,
 and every plugin feature is disabled until it is explicitly enabled under
 **Tools > Site Tools**.
 
+Stable releases update through the standard WordPress Plugins screen. Each
+release is built and validated by GitHub Actions before its installable ZIP is
+attached to the corresponding public GitHub release.
+
 ## Quick start
 
 ```bash

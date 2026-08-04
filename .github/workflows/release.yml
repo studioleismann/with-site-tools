@@ -1,0 +1,86 @@
+name: Quality and release
+
+on:
+    pull_request:
+    push:
+        branches:
+            - main
+        tags:
+            - 'v*'
+
+permissions:
+    contents: read
+
+jobs:
+    verify:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: npm
+
+            - name: Install JavaScript dependencies
+              run: npm ci
+
+            - name: Install WordPress Coding Standards
+              run: |
+                  composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+                  composer global require --dev wp-coding-standards/wpcs:3.4.1
+                  echo "$(composer global config bin-dir --absolute)" >> "$GITHUB_PATH"
+
+            - name: Verify tagged version
+              if: startsWith(github.ref, 'refs/tags/v')
+              run: npm run check:version -- "${GITHUB_REF_NAME#v}"
+
+            - name: Build and validate plugin
+              run: npm run check
+
+            - name: Ensure generated files are committed
+              run: git diff --exit-code
+
+            - name: Build release ZIP
+              run: npm run zip
+
+            - name: Verify release ZIP
+              run: |
+                  unzip -t dist/with-site-tools.zip
+                  unzip -Z1 dist/with-site-tools.zip | grep -q '^with-site-tools/with-site-tools.php$'
+                  if unzip -Z1 dist/with-site-tools.zip | grep -Eq '(^|/)(node_modules|vendor|dist)/'; then
+                    exit 1
+                  fi
+                  sha256sum dist/with-site-tools.zip > dist/with-site-tools.zip.sha256
+
+            - name: Store release files
+              if: startsWith(github.ref, 'refs/tags/v')
+              uses: actions/upload-artifact@v4
+              with:
+                  name: with-site-tools-release
+                  path: |
+                      dist/with-site-tools.zip
+                      dist/with-site-tools.zip.sha256
+                  if-no-files-found: error
+
+    release:
+        if: startsWith(github.ref, 'refs/tags/v')
+        needs: verify
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Download release files
+              uses: actions/download-artifact@v4
+              with:
+                  name: with-site-tools-release
+                  path: dist
+
+            - name: Publish GitHub release
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: gh release create "$GITHUB_REF_NAME" dist/with-site-tools.zip dist/with-site-tools.zip.sha256 --verify-tag --generate-notes --title "$GITHUB_REF_NAME"

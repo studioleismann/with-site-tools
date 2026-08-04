@@ -106,7 +106,7 @@ function with_site_tools_ase_reject_honeypot_spam(): void {
 		);
 	}
 
-	// phpcs:ignore WordPress.Security.NonceVerification.Missing
+	// phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- The public serialized form is parsed below and only protection fields are validated and read.
 	$data = wp_unslash( $_POST['data'] );
 
 	if ( ! is_string( $data ) || '' === $data ) {
