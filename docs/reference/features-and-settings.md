@@ -24,7 +24,7 @@ only while their owning plugin directory is active.
 | `blocks/core/post-terms/disable-links` | Optional Post Terms links | Adds a setting that renders taxonomy terms as plain text. | None |
 | `blocks/core/spacer/disable-margin` | Disable Spacer margins | Removes margin controls from the Spacer block. | None |
 | `media/featured-image-fallback` | Featured image fallback | Uses the first suitable content image, then a neutral placeholder, for empty Featured Image and featured-image Cover blocks. | None |
-| `plugins/admin-site-enhancements-pro/form-builder-honeypot` | Form Builder honeypot | Adds a signed honeypot and timing check to ASE Pro forms. | `admin-site-enhancements-pro` |
+| `plugins/admin-site-enhancements/form-builder-honeypot` | Form Builder honeypot | Adds a signed honeypot and timing check to ASE Pro forms. | `admin-site-enhancements` |
 | `plugins/complianz-gdpr/hide-scan-column-by-default` | Hide Complianz scan column by default | Adds `cmplz_scan` to the default hidden columns on post-list screens. A user's saved Screen Options continue to take precedence. | `complianz-gdpr` |
 | `site/disable-emojis` | Disable emoji assets | Removes WordPress emoji scripts, styles, conversions, and related DNS hints. | None |
 

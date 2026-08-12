@@ -8,6 +8,10 @@ All notable changes to With Site Tools are documented here.
 
 - Reorganized the documentation into tutorials, how-to guides, reference, and explanation following the Divio documentation system.
 
+### Fixed
+
+- Detect the ASE Pro Form Builder integration through the installed `admin-site-enhancements` plugin directory.
+
 ## [0.2.0] - 2026-08-04
 
 ### Added

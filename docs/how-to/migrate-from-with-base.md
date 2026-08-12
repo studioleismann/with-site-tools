@@ -26,7 +26,7 @@ have been tested against the matrix below.
 | Post Terms link control | `src/blocks/core/post-terms/disable-links/` | Existing `withBaseLinkTerms` attributes remain readable. |
 | Spacer margin restriction | `src/blocks/core/spacer/disable-margin/` | Verify block supports in the editor before removing the theme filter. |
 | Featured-image fallback files | `src/media/featured-image-fallback/` | The plugin consolidates Featured Image and Cover fallback behavior. |
-| ASE Pro Form Builder honeypot | `src/plugins/admin-site-enhancements-pro/form-builder-honeypot/` | Enable only while the dependency is active. |
+| ASE Pro Form Builder honeypot | `src/plugins/admin-site-enhancements/form-builder-honeypot/` | Enable only while the dependency is active. |
 | Empty Post Terms workaround | WordPress Core 7.0+ | Delete it; Core now returns empty output when no terms exist. |
 | Accordion styles in `theme.json` | Theme | Keep them because visual design remains theme-owned. |
 
